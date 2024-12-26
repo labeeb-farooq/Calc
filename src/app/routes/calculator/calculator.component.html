@@ -1,0 +1,141 @@
+<!-- <div class="flex justify-center bg-gray-200 py-6">
+    <h1 class="lg:text-5xl">
+        Calculator
+    </h1>
+</div>
+<div class="flex justify-center py-6 w-full p-4">
+    <div class="bg-slate-200">
+        <div class="display">{{ display }}</div>
+        <div class="num-buttons">
+            <div class="button button-1" (click)="getNumber(1)">1</div>
+            <div class="button button-2" (click)="getNumber(2)">2</div>
+            <div class="button button-3" (click)="getNumber(3)">3</div>
+            <div class="button button-4" (click)="getNumber(4)">4</div>
+            <div class="button button-5" (click)="getNumber(5)">5</div>
+            <div class="button button-6" (click)="getNumber(6)">6</div>
+            <div class="button button-7" (click)="getNumber(7)">7</div>
+            <div class="button button-8" (click)="getNumber(8)">8</div>
+            <div class="button button-9" (click)="getNumber(9)">9</div>
+            <div class="button button-0" (click)="getNumber(0)">0</div>
+        </div>
+        <div class="operator-buttons">
+            <div class="button button-m" (click)="oper('m')">x</div>
+            <div class="button button-d" (click)="oper('d')">/</div>
+            <div class="button button-a" (click)="oper('a')">+</div>
+            <div class="button button-s" (click)="oper('s')">-</div>
+        </div>
+        <button class="equals" (click)="calculate()">=</button>
+    </div>
+</div> -->
+
+<div class="flex justify-center bg-gray-200 py-6">
+  <h1 class="lg:text-5xl text-3xl font-bold text-gray-800">Calculator</h1>
+</div>
+
+<div class="flex justify-center py-6 w-full p-4">
+  <div class="bg-slate-200 p-6 rounded-lg shadow-lg w-full max-w-md">
+    <div class="bg-white text-right text-4xl p-4 rounded-lg shadow-inner mb-4">
+      {{ display }}
+    </div>
+    <div class="grid grid-cols-3 gap-4 mb-4">
+      <div
+        class="bg-blue-500 text-white text-lg p-4 rounded-lg hover:bg-blue-600 cursor-pointer flex justify-center"
+        (click)="getNumber(1)"
+      >
+        1
+      </div>
+      <div
+        class="bg-blue-500 text-white p-4 rounded-lg text-lg hover:bg-blue-600 cursor-pointer flex justify-center"
+        (click)="getNumber(2)"
+      >
+        2
+      </div>
+      <div
+        class="bg-blue-500 text-white p-4 rounded-lg text-lg hover:bg-blue-600 cursor-pointer flex justify-center"
+        (click)="getNumber(3)"
+      >
+        3
+      </div>
+      <div
+        class="bg-blue-500 text-white p-4 rounded-lg text-lg hover:bg-blue-600 cursor-pointer flex justify-center"
+        (click)="getNumber(4)"
+      >
+        4
+      </div>
+      <div
+        class="bg-blue-500 text-white p-4 rounded-lg text-lg hover:bg-blue-600 cursor-pointer flex justify-center"
+        (click)="getNumber(5)"
+      >
+        5
+      </div>
+      <div
+        class="bg-blue-500 text-white p-4 rounded-lg text-lg hover:bg-blue-600 cursor-pointer flex justify-center"
+        (click)="getNumber(6)"
+      >
+        6
+      </div>
+      <div
+        class="bg-blue-500 text-white p-4 rounded-lg text-lg hover:bg-blue-600 cursor-pointer flex justify-center"
+        (click)="getNumber(7)"
+      >
+        7
+      </div>
+      <div
+        class="bg-blue-500 text-white p-4 rounded-lg text-lg hover:bg-blue-600 cursor-pointer flex justify-center"
+        (click)="getNumber(8)"
+      >
+        8
+      </div>
+      <div
+        class="bg-blue-500 text-white p-4 rounded-lg text-lg hover:bg-blue-600 cursor-pointer flex justify-center"
+        (click)="getNumber(9)"
+      >
+        9
+      </div>
+      <div
+        class="bg-blue-500 text-white p-4 rounded-lg text-lg hover:bg-blue-600 cursor-pointer flex justify-center"
+        (click)="getNumber(0)"
+      >
+        0
+      </div>
+    </div>
+    <div class="grid grid-cols-4 gap-4 mb-4">
+      <div
+        class="bg-green-500 text-white p-4 rounded-lg text-lg hover:bg-green-600 cursor-pointer flex justify-center"
+        (click)="operate('m')"
+      >
+        x
+      </div>
+      <div
+        class="bg-green-500 text-white p-4 rounded-lg text-lg hover:bg-green-600 cursor-pointer flex justify-center"
+        (click)="operate('d')"
+      >
+        /
+      </div>
+      <div
+        class="bg-green-500 text-white p-4 rounded-lg text-lg hover:bg-green-600 cursor-pointer flex justify-center"
+        (click)="operate('a')"
+      >
+        +
+      </div>
+      <div
+        class="bg-green-500 text-white p-4 rounded-lg text-lg hover:bg-green-600 cursor-pointer flex justify-center"
+        (click)="operate('s')"
+      >
+        -
+      </div>
+    </div>
+    <button
+      class="bg-red-500 text-white p-4 rounded-lg hover:bg-red-600 w-full"
+      (click)="calculate()"
+    >
+      =
+    </button>
+    <button
+      class="bg-red-500 text-white p-4 rounded-lg hover:bg-red-600 w-full mt-2"
+      (click)="clear()"
+    >
+      Clear
+    </button>
+  </div>
+</div>
